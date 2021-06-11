@@ -13,6 +13,7 @@ load_dotenv()
 user = os.getenv('DB_USER')
 password = os.getenv('DB_PASSWORD')
 dbname = os.getenv('DB_NAME')
+print(user)
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = f'mongodb+srv://{user}:{password}@cluster0.gbf8e.mongodb.net/{dbname}?retryWrites=true&w=majority'
